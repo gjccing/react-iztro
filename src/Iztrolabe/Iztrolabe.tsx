@@ -9,6 +9,7 @@ import "../theme/default.css";
 import { Scope } from "iztro/lib/data/types";
 import { HeavenlyStemKey } from "iztro/lib/i18n";
 import { getPalaceNames } from "iztro/lib/astro";
+import "../locales"
 
 export const Iztrolabe: React.FC<IztrolabeProps> = (props) => {
   const [taichiPoint, setTaichiPoint] = useState(-1);
@@ -35,6 +36,9 @@ export const Iztrolabe: React.FC<IztrolabeProps> = (props) => {
     astroType: props.astroType,
     options: props.options,
   });
+  useEffect(() => {
+    // i18next.addResources()
+  }, [])
 
   const toggleShowScope = (scope: Scope) => {
     switch (scope) {
@@ -163,6 +167,7 @@ export const Iztrolabe: React.FC<IztrolabeProps> = (props) => {
         setHoroscopeDate={setHoroscopeDate}
         setHoroscopeHour={setHoroscopeHour}
         centerPalaceAlign={props.centerPalaceAlign}
+        lang={props.lang ?? "zh-CN"}
         {...dynamic}
       />
     </div>

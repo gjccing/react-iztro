@@ -11,7 +11,7 @@ export type ItemProps = {
 export const Item = ({ title, content }: ItemProps) => {
   return (
     <li className={classNames("iztro-palace-center-item")}>
-      <label>{title}</label>
+      <label>{title}：</label>
       <span>{content}</span>
     </li>
   );
