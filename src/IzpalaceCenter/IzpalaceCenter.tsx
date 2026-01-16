@@ -42,52 +42,52 @@ export const IzpalaceCenter = ({
   const records: ItemProps[] = useMemo(
     () => [
       {
-        title: i18next.t("react:labelElementType") /** "五行局" */,
+        title: i18next.t("react:labelElementType"),
         content: astrolabe?.fiveElementsClass,
       },
       {
-        title: i18next.t("react:labelNominalAge") /** "年龄(虚岁)" */,
+        title: i18next.t("react:labelNominalAge"),
         content: i18next.t("react:age", { age: horoscope?.age.nominalAge ?? "" }),
       },
       {
-        title: i18next.t("react:labelFourPillars") /** "四柱" */,
+        title: i18next.t("react:labelFourPillars"),
         content: astrolabe?.chineseDate,
       },
       {
-        title: i18next.t("react:labelSolarCalendar") /** "阳历" */,
+        title: i18next.t("react:labelSolarCalendar"),
         content: astrolabe?.solarDate,
       },
       {
-        title: i18next.t("react:labelLunarCalendar") /** "农历" */,
+        title: i18next.t("react:labelLunarCalendar"),
         content: astrolabe?.lunarDate && astrolabe?.rawDates.lunarDate &&
           toLocaleLunarStr(astrolabe.lunarDate, astrolabe.rawDates.lunarDate, lang),
       },
       {
-        title: i18next.t("react:labelChineseHour") /** "时辰" */,
+        title: i18next.t("react:labelChineseHour"),
         content: `${astrolabe?.time}(${astrolabe?.timeRange})`,
       },
       {
-        title: i18next.t("react:labelChineseZodiacSign") /** "生肖" */,
+        title: i18next.t("react:labelChineseZodiacSign"),
         content: astrolabe?.zodiac,
       },
       {
-        title: i18next.t("react:labelZodiacSign") /** "星座" */,
+        title: i18next.t("react:labelZodiacSign"),
         content: astrolabe?.sign,
       },
       {
-        title: i18next.t("react:labelSoulRuler") /** "命主" */,
+        title: i18next.t("react:labelSoulRuler"),
         content: astrolabe?.soul,
       },
       {
-        title: i18next.t("react:labelBodyRuler") /** "身主" */,
+        title: i18next.t("react:labelBodyRuler"),
         content: astrolabe?.body,
       },
       {
-        title: i18next.t("react:labelSoulPalace") /** "命宫" */,
+        title: i18next.t("react:labelSoulPalace"),
         content: astrolabe?.earthlyBranchOfSoulPalace,
       },
       {
-        title: i18next.t("react:labelBodyPalace") /** "身宫" */,
+        title: i18next.t("react:labelBodyPalace"),
         content: astrolabe?.earthlyBranchOfBodyPalace,
       },
     ],
