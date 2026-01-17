@@ -99,7 +99,6 @@ export const IzpalaceCenter = ({
     const [year, month, date] = normalizeDateStr(dateStr);
     const dt = new Date(year, month - 1, date);
     const lunarDate = solar2lunar(dateStr)
-    console.log(lunarDate)
     const lunarStr = lunarDate.toString(true)
     return {
       solar: `${year}-${month}-${date}`,
